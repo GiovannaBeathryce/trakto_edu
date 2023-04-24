@@ -1,0 +1,79 @@
+.homepage-component{
+  width: 100%;
+  height: 100vh;
+  background-image: url(../../../assets/images/img-background.png);
+  background-repeat: repeat;
+  background-color: #1d1b1b;
+  background-size: contain;
+
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+
+  font-family: "Roboto";
+}
+
+.menu-container{
+  max-width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin: 0 30px;
+}
+
+.item-menu{
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item-menu .title-icon{
+  color:#FFFFFF;
+  font-weight: 700;
+  font-size: 2.5rem;
+  height: 50px;
+  text-decoration: none;
+}
+
+.tag-color{
+  display: block;
+  width: 28px;
+  height: 4px;
+  margin-bottom: 32px;
+}
+
+.color1{
+  background: #4173CD;
+}
+.color2{
+  background: #1DC763;
+}
+.color3{
+  background: #F6B5FF;
+}
+.color4{
+  background: #FF0000;
+}
+
+.icon-menu{
+  width: 240px;
+  height: 240px;
+  cursor: pointer;
+}
+
+
+.item{
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  transition: 1s;
+}
+
+.item:hover{
+  box-shadow: 1px 1px 15px 8px rgb(152 150 150 / 50%);
+  transform: scale(1.1);
+  z-index: 3;
+}
