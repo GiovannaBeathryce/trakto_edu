@@ -1,0 +1,36 @@
+<div class="content">
+  <div class="header-area">
+    <div class="left">
+      <div class="time-area">
+        <p class="time-interval">
+          semana 06/02 até 28/02
+        </p>
+        <span>
+          <button class="button"><mat-icon class="mat-18">chevron_left</mat-icon></button>
+          <button class="button"><mat-icon class="mat-18">chevron_right</mat-icon></button>
+        </span>
+      </div>
+        <h1 class="title">{{ title }}</h1>
+        <p class="subtitle">Acesse suas últimas apresentações de aula.</p>
+    </div>
+    <div class="right" >
+      <a class="redirect material" *ngIf="title === 'Material didático'; else youtube">Ver todo conteúdo</a>
+      <ng-template #youtube>
+        <a class="redirect video" href="https://www.youtube.com/@Trakto">
+          <img src="../../../assets/images/icon-youtube.png" alt="logotipo do Youtube">
+          Abrir no Youtube</a>
+      </ng-template>
+    </div>
+  </div>
+  <div class="div__list-content">
+    <ul class="list-content">
+      <app-content-card></app-content-card>
+      <app-content-card></app-content-card>
+      <app-content-card></app-content-card>
+      <app-content-card></app-content-card>
+      <app-content-card></app-content-card>
+      <app-content-card></app-content-card>
+      <app-content-card></app-content-card>
+    </ul>
+  </div>
+</div>
