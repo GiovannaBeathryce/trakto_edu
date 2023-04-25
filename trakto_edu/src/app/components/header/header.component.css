@@ -11,6 +11,10 @@
   background: #252323;
 }
 
+.logo{
+  cursor: pointer;
+}
+
 .navbar{
   width: 30%;
   height: 90%;
