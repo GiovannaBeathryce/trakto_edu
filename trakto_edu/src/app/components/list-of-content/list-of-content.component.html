@@ -14,7 +14,7 @@
         <p class="subtitle">Acesse suas últimas apresentações de aula.</p>
     </div>
     <div class="right" >
-      <a class="redirect material" *ngIf="title === 'Material didático'; else youtube">Ver todo conteúdo</a>
+      <a class="redirect material" routerLink="/ver_todos" *ngIf="title === 'Material didático'; else youtube">Ver todo conteúdo</a>
       <ng-template #youtube>
         <a class="redirect video" href="https://www.youtube.com/@Trakto">
           <img src="../../../assets/images/icon-youtube.png" alt="logotipo do Youtube">
