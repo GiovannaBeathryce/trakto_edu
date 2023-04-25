@@ -84,3 +84,15 @@ button {
   font-weight: 500;
   font-size: 0.87rem;
 }
+
+span{
+  width: 100%;
+  margin-top: 30px;
+  font-size: 12px;
+  text-align: center;
+}
+
+span a{
+  text-decoration: none;
+  color: #66AFFF;
+}
