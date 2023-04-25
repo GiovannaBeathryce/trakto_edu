@@ -12,6 +12,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ListOfContentComponent } from './components/list-of-content/list-of-content.component';
 import { ContentCardComponent } from './components/content-card/content-card.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SeeAllComponent } from './components/see-all/see-all.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MaterialDidaticoComponent,
     FooterComponent,
     ListOfContentComponent,
-    ContentCardComponent
+    ContentCardComponent,
+    SeeAllComponent
   ],
   imports: [
     BrowserModule,
