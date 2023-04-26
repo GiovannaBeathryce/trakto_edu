@@ -12,6 +12,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ListOfContentComponent } from './components/list-of-content/list-of-content.component';
 import { ContentCardComponent } from './components/content-card/content-card.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RequestInterceptor } from './components/login-page/services/req.interceptor';
 import { SeeAllComponent } from './components/see-all/see-all.component';
 
 @NgModule({
@@ -31,8 +34,16 @@ import { SeeAllComponent } from './components/see-all/see-all.component';
     AppRoutingModule,
     MatIconModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass: RequestInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

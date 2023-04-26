@@ -4,7 +4,7 @@
   </div>
   <div class="navbar">
     <div class="date">
-      <img src="../../../assets/images/icon-calendar.png" alt="ímagem de um calendrio">
+      <mat-icon class="material-symbols-outlined calendar">calendar_month</mat-icon>
       <p>{{ currentDate | date:'dd/MM/yyyy'}}</p>
     </div>
     <div class="divider"></div>
@@ -14,12 +14,17 @@
       </button>
     </div>
     <div class="divider"></div>
-    <div class="user">
-        <img src="../../../assets/images/Avataravatar.png" alt="foto do usuário">
-        <button>
-          <img src="../../../assets/images/icon-dropdow.png" alt="">
+    <div class="user" *ngIf="initialName !== '', else login">
+      <div class="avatar" >
+        <p>{{ initialName }}</p>
+      </div>
+        <button (click)="logout()">
+          <mat-icon class="material-symbols-outlined">arrow_drop_down</mat-icon>
         </button>
     </div>
+    <ng-template #login>
+      <a routerLink="/login" class="btn-login">Login</a>
+    </ng-template>
   </div>
 
 </header>
