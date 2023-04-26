@@ -65,6 +65,7 @@
   height: 100%;
 }
 
+
 .navbar .user{
   width: 20%;
   height: 90%;
@@ -74,10 +75,42 @@
   justify-content: center;
 
 }
+
+.navbar .user .avatar{
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #E4EBFB;
+  border-radius: 50%;
+}
+
+.navbar .user .avatar p{
+  width: 100%;
+  text-align: center;
+  color: black;
+  font-weight: 600;
+  font-size: 26px;
+}
+
+.btn-login{
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 24px;
+  color: #E4EBFB;
+}
+
 .navbar .user button{
   width: 8px;
   height: 90%;
   background: transparent;
   border: none;
-  margin: 10px;
+  padding: 5px;
+}
+
+.material-symbols-outlined{
+  color: #E4EBFB;
+  font-size: 25px;
 }

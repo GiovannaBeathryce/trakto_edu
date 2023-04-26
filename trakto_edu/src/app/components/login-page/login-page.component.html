@@ -3,15 +3,39 @@
     <img src="../../../assets/images/logo-trakto.png" alt="logotipo Trakto">
     <h1>Olá, faça login em sua conta.</h1>
   </header>
-  <form>
+  <form [formGroup]="data" (submit)="login()">
     <div class="input-container">
-      <input required id="email" type="text" placeholder="fulano@email.com">
+      <span class="message_error"
+      *ngIf="data.get('email')?.errors?.['email'] && data.get('email')?.touched">
+        Verifique se o formato do email está correto.
+      </span>
+      <span class="message_error"
+      *ngIf="data.get('email')?.errors && data.get('email')?.touched">
+        O email é obrigatório.
+      </span>
+      <input
+      type="text"
+      id="email"
+      formControlName="email"
+      placeholder="fulano@email.com">
       <label for="email">E-mail</label>
     </div>
     <div class="input-container">
-      <input required id="senha" type="password" name="senha" id="senha" placeholder="••••••••••">
-      <label for="senha">Senha</label>
+      <span class="message_error"
+      *ngIf="data.get('password')?.errors && data.get('password')?.touched">
+        A senha é obrigatória.
+      </span>
+      <input
+      type="password"
+      id="password"
+      formControlName="password"
+      name="password"
+      placeholder="••••••••••">
+      <label for="password">Senha</label>
     </div>
-      <button>Entrar</button>
+    <div class="message_">
+
+    </div>
+      <button [disabled]="data.invalid" (click)="login()">Entrar</button>
   </form>
 </section>
