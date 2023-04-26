@@ -5,6 +5,8 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { MaterialDidaticoComponent } from './components/material-didatico/material-didatico.component';
 import { AuthGuard } from './auth.guard';
 import { RedirectGuard } from './redirect.guard';
+import { SeeAllComponent } from './components/see-all/see-all.component';
+
 
 const routes: Routes = [
   {
@@ -26,6 +28,11 @@ const routes: Routes = [
     path: 'material_didatico',
     component: MaterialDidaticoComponent,
     canActivate : [AuthGuard]
+  },
+  {
+    path: 'ver_todos',
+    component: SeeAllComponent
+
   }
 ];
 

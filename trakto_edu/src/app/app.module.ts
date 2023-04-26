@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RequestInterceptor } from './components/login-page/services/req.interceptor';
+import { SeeAllComponent } from './components/see-all/see-all.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { RequestInterceptor } from './components/login-page/services/req.interce
     MaterialDidaticoComponent,
     FooterComponent,
     ListOfContentComponent,
-    ContentCardComponent
+    ContentCardComponent,
+    SeeAllComponent
   ],
   imports: [
     BrowserModule,
