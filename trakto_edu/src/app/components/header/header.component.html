@@ -1,0 +1,35 @@
+<header class="header dark" >
+  <div class="logo">
+    <img routerLink="/home" src="../../../assets/images/logo-trakto-edu.png" alt="logotipo trakto educação">
+    <button class="btn-logout" (click)="logout()">
+      <mat-icon class="mat-18">logout</mat-icon>
+      Trocar de ambiente
+    </button>
+
+  </div>
+  <div class="navbar">
+    <div class="date">
+      <mat-icon class="material-symbols-outlined calendar">calendar_month</mat-icon>
+      <p>{{ currentDate | date:'dd/MM/yyyy'}}</p>
+    </div>
+    <div class="divider"></div>
+    <div class="notification">
+      <button>
+        <mat-icon class="mat-18">notifications_none</mat-icon>
+      </button>
+    </div>
+    <div class="divider"></div>
+    <div class="user" *ngIf="initialName !== '', else login">
+      <div class="avatar" >
+        <p>{{ initialName }}</p>
+      </div>
+        <button >
+          <mat-icon class="material-symbols-outlined">arrow_drop_down</mat-icon>
+        </button>
+    </div>
+    <ng-template #login>
+      <a routerLink="/login" class="btn-login">Login</a>
+    </ng-template>
+  </div>
+
+</header>

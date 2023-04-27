@@ -1,0 +1,148 @@
+.header{
+  width: 100%;
+  height: 75px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 0 50px;
+
+}
+
+.dark{
+  background: #252323;
+}
+
+.light{
+  background: #FFFFFF;
+
+}
+
+.logo{
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.btn-logout {
+  height: 56px;
+  width: 254px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30px;
+
+  color: #7183A6;
+  background: transparent;
+  border: 1px solid #7183A6;
+  border-radius: 8px;
+
+  font-size: 20px;
+  font-weight: 500px;
+
+
+}
+
+.navbar{
+  width: 30%;
+  height: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+
+  color: #E4EBFB;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.navbar .divider{
+  background: #E4EBFB;
+  width: 1px;
+  height: 60%;
+}
+
+.navbar .date{
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  color:#E4EBFB
+}
+
+.navbar .notification{
+  width: 15%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar .notification button{
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  color:#E4EBFB
+
+}
+.navbar .notification img{
+  width: 100%;
+  height: 100%;
+}
+
+
+.navbar .user{
+  width: 20%;
+  height: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.navbar .user .avatar{
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #E4EBFB;
+  border-radius: 50%;
+}
+
+.navbar .user .avatar p{
+  width: 100%;
+  text-align: center;
+  color: black;
+  font-weight: 600;
+  font-size: 26px;
+}
+
+.btn-login{
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 24px;
+  color: #E4EBFB;
+}
+
+.navbar .user button{
+  width: 8px;
+  height: 90%;
+  background: transparent;
+  border: none;
+  padding: 5px;
+}
+
+.material-symbols-outlined{
+  color: #E4EBFB;
+  font-size: 25px;
+}

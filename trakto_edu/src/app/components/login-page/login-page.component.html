@@ -1,0 +1,42 @@
+<section class="login-page-container">
+  <header>
+    <img src="../../../assets/images/logo-trakto.png" alt="logotipo Trakto">
+    <h1>Olá, faça login em sua conta.</h1>
+  </header>
+  <form [formGroup]="data" (submit)="login()">
+    <div class="input-container">
+      <span class="message_error"
+      *ngIf="data.get('email')?.errors?.['email'] && data.get('email')?.touched">
+        Verifique se o formato do email está correto.
+      </span>
+      <span class="message_error"
+      *ngIf="data.get('email')?.errors && data.get('email')?.touched">
+        O email é obrigatório.
+      </span>
+      <input
+      type="text"
+      id="email"
+      formControlName="email"
+      placeholder="fulano@email.com">
+      <label for="email">E-mail</label>
+    </div>
+    <div class="input-container">
+      <span class="message_error"
+      *ngIf="data.get('password')?.errors && data.get('password')?.touched">
+        A senha é obrigatória.
+      </span>
+      <input
+      type="password"
+      id="password"
+      formControlName="password"
+      name="password"
+      placeholder="••••••••">
+      <label for="password">Senha</label>
+    </div>
+    <div class="message_">
+
+    </div>
+      <button [disabled]="data.invalid" (click)="login()">Entrar</button>
+      <span>Ainda não possui uma conta? <br> <a href="https://dashboard.trakto.io/register">clique aqui</a> e cadastrar-se</span>
+  </form>
+</section>
