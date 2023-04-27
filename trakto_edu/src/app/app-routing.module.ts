@@ -22,7 +22,7 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomePageComponent,
-    canActivate : [AuthGuard]
+    // canActivate : [AuthGuard]
   },
   {
     path: 'material_didatico',

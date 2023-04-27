@@ -1,6 +1,6 @@
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from './../login-page/services/user.service';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -15,12 +15,17 @@ export class HeaderComponent {
 
   constructor(
     private user : UserService,
-    private router : Router
+    private router : Router,
+    private route : ActivatedRoute,
     ){
 
     const hasUser = user.getUsername()
     this.username = hasUser!
     this.getInitial()
+
+  }
+
+  ngOnInit(): void {
   }
 
   getInitial(){
@@ -34,4 +39,5 @@ export class HeaderComponent {
     this.username = ''
     this.router.navigate(['login'])
   }
+
 }

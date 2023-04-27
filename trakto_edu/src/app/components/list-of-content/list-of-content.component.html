@@ -22,15 +22,16 @@
       </ng-template>
     </div>
   </div>
-  <div class="div__list-content">
-    <ul class="list-content">
-      <app-content-card></app-content-card>
-      <app-content-card></app-content-card>
-      <app-content-card></app-content-card>
-      <app-content-card></app-content-card>
-      <app-content-card></app-content-card>
-      <app-content-card></app-content-card>
-      <app-content-card></app-content-card>
+    <div class="div__list-content" *ngIf="title === 'Material didático'; else youtubeArea" >
+      <ul class="list-content"  >
+        <app-content-card *ngFor="let design of designsList" [design]="design"></app-content-card>
+      </ul>
+    </div>
+  <ng-template class="div__list-content" #youtubeArea >
+    <ul class="list-content list-content-else"  >
+      <app-content-card-fixed *ngFor="let img of ytImageCover" [img]="img"></app-content-card-fixed>
     </ul>
-  </div>
+  </ng-template>
+
+
 </div>

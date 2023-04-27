@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { IDesigns } from '../material-didatico/design';
 
 @Component({
   selector: 'app-content-card',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./content-card.component.css']
 })
 export class ContentCardComponent {
-
+  @Input() design : IDesigns = {
+    id: '',
+    cover: '',
+    thumbs: '',
+    title: '',
+  }
 }

@@ -1,3 +1,6 @@
+<header>
+  <app-header></app-header>
+</header>
 <section class="container">
   <div class="div__list-content">
     <div class="header-area">
@@ -7,20 +10,8 @@
 
   </div>
 
-    <ul class="list-content">
-      <app-content-card></app-content-card>
-      <app-content-card></app-content-card>
-      <app-content-card></app-content-card>
-      <app-content-card></app-content-card>
-      <app-content-card></app-content-card>
-      <app-content-card></app-content-card>
-      <app-content-card></app-content-card>
-      <app-content-card></app-content-card>
-      <app-content-card></app-content-card>
-      <app-content-card></app-content-card>
-      <app-content-card></app-content-card>
-      <app-content-card></app-content-card>
-      <app-content-card></app-content-card>
+    <ul class="list-content" >
+      <app-content-card *ngFor="let design of designsListAll" [design]="design"></app-content-card>
     </ul>
   </div>
 </section>

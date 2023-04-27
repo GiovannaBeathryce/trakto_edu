@@ -1,6 +1,11 @@
-<header class="header">
+<header class="header dark" >
   <div class="logo">
     <img routerLink="/home" src="../../../assets/images/logo-trakto-edu.png" alt="logotipo trakto educação">
+    <button class="btn-logout" (click)="logout()">
+      <mat-icon class="mat-18">logout</mat-icon>
+      Trocar de ambiente
+    </button>
+
   </div>
   <div class="navbar">
     <div class="date">
@@ -18,7 +23,7 @@
       <div class="avatar" >
         <p>{{ initialName }}</p>
       </div>
-        <button (click)="logout()">
+        <button >
           <mat-icon class="material-symbols-outlined">arrow_drop_down</mat-icon>
         </button>
     </div>

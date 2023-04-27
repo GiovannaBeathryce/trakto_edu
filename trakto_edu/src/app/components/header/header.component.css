@@ -8,11 +8,41 @@
   flex-direction: row;
   padding: 0 50px;
 
+}
+
+.dark{
   background: #252323;
+}
+
+.light{
+  background: #FFFFFF;
+
 }
 
 .logo{
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.btn-logout {
+  height: 56px;
+  width: 254px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30px;
+
+  color: #7183A6;
+  background: transparent;
+  border: 1px solid #7183A6;
+  border-radius: 8px;
+
+  font-size: 20px;
+  font-weight: 500px;
+
+
 }
 
 .navbar{

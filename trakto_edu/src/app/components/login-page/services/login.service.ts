@@ -24,8 +24,8 @@ export class LoginService {
         const username = res.body.firstname
         this.userService.setToken(authToken)
         this.userService.setName(username)
+        this.router.navigate(['home'])
 
-        // console.log(`O usuario ${username}, está autenticado com o o toke ${authToken}`)
       }))
   }
 

@@ -16,6 +16,7 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RequestInterceptor } from './components/login-page/services/req.interceptor';
 import { SeeAllComponent } from './components/see-all/see-all.component';
+import { ContentCardFixedComponent } from './components/content-card-fixed/content-card-fixed.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SeeAllComponent } from './components/see-all/see-all.component';
     FooterComponent,
     ListOfContentComponent,
     ContentCardComponent,
-    SeeAllComponent
+    SeeAllComponent,
+    ContentCardFixedComponent
   ],
   imports: [
     BrowserModule,
